@@ -1,227 +1,65 @@
-
-html {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 li {
-    list-style: none;
+    list-style-type: none;
 }
 
-.icons {
-    margin-top: 20px;
+a {
+    text-decoration: none;
 }
 
-.icons li{
-    position: relative;
-    padding: 0 25px;
-    display: inline-block;
-    left: 40%;
-}
-
-.icon1, .icon2, .icon3 {
-    height: 25px;
-    width: 25px;
-}
-
-.animated-gear {
-    display: none;
-}
-
-.contact-button {
-    display: none;
+.logo {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    z-index: -9;
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
     z-index: -10;
 }
 
-.logo {
-    position: absolute;
-    width: 170px;
-    height: 80px;
-    top: 3%;
-    left: 2%;
-}
-
-.title-section {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 50px;
-    min-height: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.title-section h3 {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 120px;
-    padding: 0;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-}
-
-.title-section h2 {
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    font-size: 70px;
-    color: white;
-    text-align: center;
-}
-
-.title-section h4 {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0;
-    width: 100%;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-}
-
-.form-section {
-    margin-top: 15%;
-}
-
-.form-section h4{
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 2%;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: rgb(69, 69, 69);
-}
-
 .newsletter {
-    position: relative;;
-    
+    padding: 30px;
+    background-color: rgba(52, 64, 92, 80%);
+    border-radius: 5px;
 }
 
-
-
-#name, #email, #company {
-    position: relative;
-    margin: 0 auto;
-    padding: 6px 5px;
-    margin-left: 30%;
-    width: 40%;
-    border: 1px solid white;
-    border-radius: 3px;
-}
-
-#comment {
-    position: relative;
-    margin: 0 auto;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 6px;
-    padding-bottom: 30px;
-    margin-left: 30%;
-    width: 40%;
-    border: 1px solid white;
-    border-radius: 3px;
-    
-}
-
-a {
-    text-decoration: none;
+.form-label {
     color: whitesmoke;
 }
 
-.btn {
-    position: relative;
-    left: 46%;
+b {
+    color: red;
 }
 
-.btn-default {
-    padding: 5px 20px;
-    border-radius: 10px;
-    background-color: rgb(204, 64, 64);
-}
 
-.btn-default:hover {
-    background-color: rgb(76, 125, 76);
-}
-
-@media only screen and (max-width: 900px) {
-    .form-section {
-        display: none;
-    }
-
+@media only screen and (max-width: 900px){
     .background {
         display: none;
     }
 
     .logo {
-        position: absolute;
-        top: 88%;
-        z-index: -10;
-        opacity: 0.2;
+        position: fixed;
+        width: 100%;
     }
 
-    html {
-        background-color: #fff;
-    }
-
-
-    .icons {
-        display: none;
-    }
-
-    .animated-gear {
-        display: flex;
-        position: relative;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        margin-top: 120px;
-    }
-
-    .contact-button {
-        display: flex;
-        position: relative;
-        margin: 0 auto;
-        margin-top: 50px;
-        padding: 10px 20px;
-        background-color: rgba(100, 120, 116, 0.85);
-        color: rgba(255, 255, 255, 85%);
-        border-radius: 20px;
-        width: 35%;
-        text-align: center;
-        box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 10%); 
-    }
-
-
-    .title-section h3 {
-        margin-top: 50px;
+    .h4-mobile {
+        margin-bottom: 50%;
         font-size: 20px;
-        color: rgba(0, 0, 0, 85%);
     }
 
-    .title-section h2 {
-        font-size: 50px;
-        margin-top: 25px;
-        color: rgba(0, 0, 0, 85%);
-    }
-
-    .title-section h4 {
-        font-size: 12px;
-        margin-top: 25px;
+    .h3-mobile {
+        font-size: 20px;
     }
 }
