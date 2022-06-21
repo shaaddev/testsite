@@ -32,12 +32,12 @@
                     <div class="form-group">
                         <label for="name" class="form-label">Full Name<b>*</b></label>
                         <input type="text" class="form-control" id="name" name="name">
-                        <?php if(isset($name)){ echo $errors['name']; } ?>
+                        <?php if(isset($name)){ echo $errors['name']; }?>
                     </div>    
                     <div class="form-group">
                         <label for="email" class="form-label">Email<b>*</b></label>
                         <input type="email" class="form-control" id="email" name="email" >
-                        <?php if(isset($email)){ echo $errors['email']; } ?>
+                        <?php if(isset($email)){ echo $errors['email']; }?>
                     </div>
                     <div class="form-group">   
                         <label for="company" class="form-label">Company/Organization <b>*</b></label>
@@ -46,7 +46,7 @@
                     <div class="form-group"> 
                         <label for="comment" class="form-label">Comment or Message <b>*</b></label>
                         <textarea type="text" class="form-control" id="comment" name="comment"></textarea>
-                        <?php if(isset($comment)){ echo $errors['comment']; } ?>
+                        <?php if(isset($comment)){ echo $errors['comment']; }?>
                     </div>
                     <input type="submit" class="btn btn-danger" value="Subscribe!">                    
                 </form>
@@ -58,27 +58,7 @@
 
 <?php 
 
-    include_once 'connect.php';
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $company = $_POST['company'];
-    $comment = $_POST['comment'];
-
-    // check for requirement
-    $errors = array()
-
-    if(!isset($name) || empty($name)){
-        $errors['name'] = 'Full name is required';
-    } else if(!isset($email) || empty($email)) {
-        $errors['email'] = 'Email Address is required';
-    } else if(!isset($comment) || empty($comment)) {
-        $erros['comment'] = 'Please enter a message';
-    }
-
-    // add data to table
-    $sql = 'INSERT INTO Contact (Fname, Email, Company, Comment) VALUES (:fname, :email, :company, :comment)';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['fname' => $name, 'email' => $email, 'company' => $company, 'comment' => $comment]);
+    include_once 'mail.php';
+    include_once 'database.php';    
     
 ?>
