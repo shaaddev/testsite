@@ -41,7 +41,7 @@
     $mail->Subject = "Hey, you have a customer!";
 
     // set sender email
-    $mail->setFrom($email);
+    $mail->setFrom($email, 'Website');
 
     // enable HTML
     $mail->isHTML(true);
@@ -49,8 +49,9 @@
     // email body
     $mail->Body = "<h2> Name: " . $name . "</h2><br><br><h2>Company: " . $company . "</h2><br><br><h2>Comment: " . $comment . "</h2>" ;
 
-    // add recipient -- change to personal/work email for testing
+    // add recipient -- change to personal/work email for testing -- addBCC, addCC for multiple emails
     $mail->addAddress("");
+    $mail->addCC("");
 
     // send email
     if($mail->Send()){
